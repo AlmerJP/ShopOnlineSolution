@@ -11,6 +11,7 @@ namespace ShopOnline.Api.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Product>().Ignore(p => p.ProductCategory);
             base.OnModelCreating(modelBuilder);
 
             //Products
